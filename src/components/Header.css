@@ -1,0 +1,16 @@
+.crypto-title{
+color: rgb(7, 195, 237);
+font-family: "Montserrat" !important;
+font-weight: 600 !important;
+cursor: pointer;
+font-size: 26px !important;
+}
+                  
+#outlined-select-currency{
+min-height: 8px;
+max-height: 8px;
+width: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
