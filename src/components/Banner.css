@@ -1,0 +1,31 @@
+.banner{
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../assets/banner.jpg");
+/* background-size:cover; */
+background-position: center;
+}
+                    
+                    
+.banner-Content{
+height: 400px;
+display: flex;
+flex-direction: column;
+padding-top: 30px;
+justify-content: space-around;
+}
+                    
+.headline{
+display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+height: 40%;
+font-family: "Montserrat" ;
+font-size: 35px;
+}
+                    
+.headline > p{
+text-align: center;
+font-size: 16px;
+color: grey;
+margin-top: 10px;
+}
