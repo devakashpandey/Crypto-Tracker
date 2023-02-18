@@ -6,6 +6,53 @@
 }
 
 .coins-textfield{
-  width:90%;
+  width:100%;
   margin-top: 20px !important;
 }
+
+.progress-bar{
+  margin-top: 10px;
+  width: 100%;
+}
+
+.table-container{
+  margin-top: 20px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.table-head{
+background-color: rgb(7, 195, 237);            
+}
+
+.table-cell{
+ color: black !important;
+ font-weight: 600 !important;
+ font-size: 16px !important;
+ font-family: "Montserrat" !important ;
+}
+
+.coin-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-symbol{
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.table-row{
+ cursor: pointer;
+ background-color: rgba(17, 17, 17, 0.419);
+}
+
+.table-row:hover{
+  background-color: rgba(5, 5, 5, 0.419) ;               
+}
+
+.pagination{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
