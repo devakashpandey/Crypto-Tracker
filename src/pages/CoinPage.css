@@ -46,10 +46,30 @@ font-weight: 400;
 
 
 
-/* @media screen {
+/* @media screen md {
              .container{
                  display: flex;
                  flex-direction: column;
                  align-items: center;
              }          
+} */
+
+
+/* @media screen md {
+             .market-data{
+                 display: flex;
+                 justify=t-content:space-around
+             }         
+             
+             sm{
+            .market-data{
+             flex-directioion:column
+             align-items:center
+            }
+
+            xs{
+               .market-data{
+                      align-items:start
+               } 
+            }
 } */

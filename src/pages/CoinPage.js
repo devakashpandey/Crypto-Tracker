@@ -7,7 +7,6 @@ import { SingleCoin } from '../config/api';
 import CoinChart from '../components/CoinChart';
 import { numberWithCommas } from '../components/Carousel';
 import { LinearProgress } from '@mui/material';
-// import  {ReactHtmlParser}  from "react-html-parser"
 
 const CoinPage = () => {
 
@@ -43,7 +42,8 @@ const CoinPage = () => {
         <h2>{coin.name}</h2>
 
         <p className='coin-descrip'> 
-          {coin?.description?.en.split(".")[0]}.
+           {/* this for redering only html stuffs */}
+        <span dangerouslySetInnerHTML = {{ __html :coin?.description?.en.split(". ")[0]}}/>.
         </p>
 
         <div className='market-data'>
