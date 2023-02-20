@@ -14,3 +14,18 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+
+@media (max-width:500px) {
+ 
+.crypto-title{
+    font-size: 22px !important;
+ }
+
+ #outlined-select-currency{
+                      min-height: 5px;
+                      max-height: 5px;
+                      width: 45px;
+                      
+}
+                      
+}

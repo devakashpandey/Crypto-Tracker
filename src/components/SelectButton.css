@@ -25,3 +25,13 @@
  font-weight: 700;
  cursor: pointer;
 }
+
+
+@media (max-width:500px) {
+  .unactive,.active{
+    padding: 8px 15px;
+    width: 20%;
+    font-size: 13px;
+  }
+  
+}

@@ -16,11 +16,9 @@
 }
 
 
-/* @media screen md {
+@media (max-width:800px)  {
     .chart-container{
            width:100%;
-           margintop:0
-           paddingtop:0
-           padding :20
+           padding-top:0;
     }      
-} */
+}
