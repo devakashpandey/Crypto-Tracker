@@ -8,6 +8,14 @@
   padding: 40px;
 }
 
+.my-btns {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
 /* @media screen md {
     .chart-container{
            width:100%;

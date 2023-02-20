@@ -45,7 +45,7 @@ font-weight: 400;
 
 
 
-/* @media screen md {
+/* @media (min-width:"768px") {
              .container{
                  display: flex;
                  flex-direction: column;
