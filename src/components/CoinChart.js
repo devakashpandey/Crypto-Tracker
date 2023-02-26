@@ -26,8 +26,6 @@ const CoinChart = ({ coin }) => {
 
  const [chartData, setChartData] = useState();
  const [days, setDays] = useState(1);
- const [selected, useSelected] = useState(1)
-
 
  const { currency } =  UseCryptoValue();
 
@@ -36,7 +34,6 @@ const CoinChart = ({ coin }) => {
     setChartData(data?.prices)
 }
 
-console.log("data", chartData)
 
 useEffect(() => {
    fetchChartData()
@@ -101,10 +98,6 @@ useEffect(() => {
 
                <SelectButton onClick={() => setDays(90)}selected={ 90 === days}>
                  3 Months
-               </SelectButton>
-
-               <SelectButton onClick={() => setDays(240)} selected={ 240 === days}>
-                 8 Months
                </SelectButton>
 
                 <SelectButton onClick={() => setDays(365)} selected={ 365 === days} >

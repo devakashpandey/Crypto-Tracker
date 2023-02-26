@@ -6,6 +6,7 @@ const ContextProvider = ({children}) => {
 
    const [currency, setCurrency] = useState("INR") // for default currency
    const [symbol , setSymbol] = useState("₹")  // changing the symbol/currency after selecting the option
+ 
 
    useEffect(() => {
       if(currency === "INR") setSymbol("₹")
@@ -16,7 +17,7 @@ const ContextProvider = ({children}) => {
          <CryptoContext.Provider value={{ currency, symbol, setCurrency }}>
               {children}
          </CryptoContext.Provider> 
-     )
+     ) 
 
 }
 

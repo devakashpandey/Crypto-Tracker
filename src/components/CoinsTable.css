@@ -56,3 +56,9 @@ background-color: rgb(7, 195, 237);
   justify-content: center;
 }
 
+@media (max-width:550px) {
+  .coins-title{
+    font-size: 30px;
+  }
+}
+

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./CoinsTable.css";
 import { UseCryptoValue } from "../context/CryptoContext";
-import axios from 'axios';
-import { CoinList } from '../config/api';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Container, Pagination } from '@mui/material';
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import LinearProgress from '@mui/material/LinearProgress';
 import TableContainer from '@mui/material/TableContainer';
 import Table from '@mui/material/Table';
@@ -15,31 +13,38 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { useNavigate } from 'react-router-dom';
 import { numberWithCommas } from './Carousel';
+import axios from 'axios';
+import { CoinList } from '../config/api';
+
 
 
 const CoinsTable = () => {
 
- const [ coins, setCoins ] = useState([])
- const [ loading, setLoading ] = useState(false)
- const [ search, setSearch ] = useState("")
+//  const [ search, setSearch ] = useState("")
  const [ page, setPage ] = useState(1)
 
- const { currency, symbol } = UseCryptoValue()
+ const { symbol, currency } = UseCryptoValue()
  const navigate = useNavigate()
+
+   
+ const [ coins, setCoins ] = useState([])
+ const [ loading, setLoading ] = useState(false)
+
 
  const fetchCoins = async () => {
 
-      setLoading(true)
-      const { data } = await axios.get(CoinList(currency))
+   setLoading(true)
+   const { data } = await axios.get(CoinList(currency))  // COIN LIST OF CONIS TABLE
 
-      setCoins(data)
-      setLoading(false) 
+   setCoins(data)
+   setLoading(false) 
 }
 
-
-useEffect(() => {
+ useEffect(() => {
    fetchCoins()          
-},[currency])
+ },[currency])
+
+
 
   // --- this for the dark mode ----
   const darkTheme = createTheme({
@@ -48,12 +53,12 @@ useEffect(() => {
       },
  });
 
- const handleSearch = () =>{
-     return coins.filter((coin) => {
-          coin.name.toLowerCase().includes(search) || 
-          coin.symbol.toLowerCase().includes(search)
-     })
- }
+//  const handleSearch = () =>{
+//      return coins.filter((coin) => {
+//           coin.name.toLowerCase().includes(search) || 
+//           coin.symbol.toLowerCase().includes(search)
+//      })
+//  }
 
   return (
      <>
@@ -63,10 +68,10 @@ useEffect(() => {
            Cryptocurrency Prices By Market Cap
            </h2>
 
-           <TextField className='coins-textfield' 
+           {/* <TextField className='coins-textfield' 
              label="Search For a Coin" type="text"
              onChange={(e) => setSearch(e.target.value)}
-            />
+            /> */}
 
             <TableContainer className='table-container'>
                       {
@@ -92,7 +97,7 @@ useEffect(() => {
 
                                   <TableBody>
                              {/* this handlesearch return all of the filtered coins */}
-                                      { handleSearch() && coins
+                                      {/*  handleSearch() &&*/} { coins 
                                            .slice((page-1)*10, (page-1)* 10 + 10)  // FOR ONLY SHOW 10 COMPONENTS IN 1 PAGE
                                            .map((row) =>{
                                              let profit = row.price_change_percentage_24h > 0;

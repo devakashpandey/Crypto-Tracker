@@ -53,15 +53,13 @@ font-weight: 400;
              }          
 }
 
-
 @media (max-width:800px) {
              .coin-info{
                 width: 100%;
                 padding: 10px;
                 border-right: none;
              }  
-            }       
-            
+            }            
 
 
 @media (max-width:1200px) {
@@ -73,8 +71,7 @@ font-weight: 400;
  }
  
 }
-
-
+/* 
 @media (max-width:500px) {
   h2{
     font-size: 42px;
@@ -83,4 +80,4 @@ font-weight: 400;
   img{
     height: 180px;
   }
-}
+} */
