@@ -84,7 +84,7 @@ const CoinsTable = () => {
                                     
                                      <TableCell className='table-cell'
                                        key={tableHead}
-                                       align={tableHead === "Coins" ? "" : "right"}
+                                       align= "right"
                                        //   align="center"
                                      >
                                         {tableHead}
@@ -162,7 +162,7 @@ const CoinsTable = () => {
             </TableContainer>
 
             <Pagination
-            count={(coins.length/10).toFixed(0)}  // DONT WANT IN DECIMAL SO WE USE toFixed(0)
+            // count={(coins.length/10).toFixed(0)}  // DONT WANT IN DECIMAL SO WE USE toFixed(0)
             className="pagination"
             color="primary"
             onChange={(_, value) => { setPage(value); }}
