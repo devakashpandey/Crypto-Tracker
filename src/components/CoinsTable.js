@@ -144,7 +144,7 @@ const CoinsTable = () => {
                                              
                                                 </TableCell>
 
-                                                 <TableCell align='right' style={{ fontWeight:400, fontSize: 17}}>
+                                                 <TableCell className='market-cap' align='right'>
                                                  {symbol}{" "}
                                                    {numberWithCommas(
                                                       row.market_cap.toString().slice(0,-6)
