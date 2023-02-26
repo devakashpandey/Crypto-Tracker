@@ -97,8 +97,7 @@ const CoinsTable = () => {
 
                                   <TableBody>
                              {/* this handlesearch return all of the filtered coins */}
-                                      {/*  handleSearch() &&*/} { coins 
-                                           .slice((page-1)*10, (page-1)* 10 + 10)  // FOR ONLY SHOW 10 COMPONENTS IN 1 PAGE
+                                      { coins.slice((page-1)*10, (page-1)* 10 + 10)  // FOR ONLY SHOW 10 COMPONENTS IN 1 PAGE
                                            .map((row) =>{
                                              let profit = row.price_change_percentage_24h > 0;
 
@@ -163,7 +162,7 @@ const CoinsTable = () => {
             </TableContainer>
 
             <Pagination
-            count={(coins?.length/10).toFixed(0)}  // DONT WANT IN DECIMAL SO WE USE toFixed(0)
+            count={(coins.length/10).toFixed(0)}  // DONT WANT IN DECIMAL SO WE USE toFixed(0)
             className="pagination"
             color="primary"
             onChange={(_, value) => { setPage(value); }}
